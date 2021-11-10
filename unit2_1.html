@@ -1,0 +1,25 @@
+<html>
+<header>
+    <title>
+        Creative coding workshop
+    </title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let canvas = document.querySelector('canvas');
+            let context = canvas.getContext('2d');
+            context.fillStyle = 'red';
+            context.beginPath();
+            context.fillRect(100, 100, 400, 400);
+            context.arc(200, 200, 50, 0, Math.PI * 2);
+            context.stroke();
+        }, false);
+    </script>
+</header>
+
+<body>
+    <canvas width="600" height="600">
+
+    </canvas>
+</body>
+
+</html>

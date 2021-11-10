@@ -1,0 +1,45 @@
+<html>
+<header>
+    <title>
+        Creative coding workshop
+    </title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let canvas = document.querySelector('canvas');
+            let context = canvas.getContext('2d');
+            let radius = 25;
+            let y = 200;
+            let x = 200;
+            let gap = 75;
+            let start_radius = 0;
+            let end_radius = Math.PI * 2;
+
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 5; j++) {
+                    context.beginPath();
+                    context.arc(x + (i * gap), y + (j*gap), radius +(10*j), start_radius, end_radius);
+                    // context.fillText("Hello", x, y, 300);
+                    context.stroke();
+
+                    context.beginPath();
+                    context.arc(x + (i * gap), y + (j*gap), radius-5, start_radius, end_radius);
+                    // context.fillText("Hello", x, y, 300);
+                    context.stroke();
+
+                }
+            }
+
+            // context.fillText("Hello Herve", x + (5 * radius * 2 + gap), y + radius, 300);
+            // context.stroke();
+        }, false);
+
+    </script>
+</header>
+
+<body>
+    <canvas width="600" height="600">
+
+    </canvas>
+</body>
+
+</html>
